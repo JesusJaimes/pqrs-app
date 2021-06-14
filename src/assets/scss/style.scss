@@ -1,0 +1,122 @@
+// :root{
+//     padding: 0;
+//     margin: 0;
+
+// }
+.login, .registro, .solicitud{
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.pqrs-info{
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    &--card{
+        width: 40rem;
+    }
+}
+
+
+.form{
+    text-align: center;
+    background-color: #ffffff;
+
+    &--login{
+        width: 27rem;
+    }
+
+    &--registro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "title title"
+            "alert alert"
+            "field1 field2"
+            "button button";
+        justify-items: center;
+        align-items: center;
+    }
+
+    &--solicitud{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 1rem;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "title title"
+            "alert alert"
+            "field1 field2"
+            "textarea textarea"
+            "field3 field3"
+            "button button";
+        justify-items: center;
+        align-items: center;
+    }
+
+    &__title{
+        text-align: center;
+
+        &--registro, &--solicitud{
+            grid-area: title;
+        }
+    }
+
+    &__alert{
+        &--registro, &--solicitud{
+            grid-area: alert;
+        }
+    }
+
+    &__fields{
+        &1{
+            &--registro{
+                grid-area: field1;
+            }
+            &--solicitud{
+                grid-area: field1;
+                width: 100%;
+            }
+        }
+
+        &2{
+            &--registro, &--solicitud{
+                grid-area: field2;
+            }
+        }  
+
+        &3{
+            &--solicitud{
+                grid-area: field3;
+                width: 100%;
+            }
+        }
+        
+    }
+
+    &__textareas{
+        
+        &--solicitud{
+            grid-area: textarea;
+            width: 100%;
+        }
+        
+    }
+
+    &__button{
+        &--registro, &--solicitud{
+            grid-area: button;
+        }
+    }
+    
+}
+
+.table{
+    &--users{
+        
+    }
+}
